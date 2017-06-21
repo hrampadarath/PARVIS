@@ -16,4 +16,8 @@ Note before running this script, a new .xml file is generated via
 >python2.7 createxml.py simulation.inputs
 
 This is executed in the main python script
-this is to create the FITS header file the full simulator should be executed using the SimulatorMueller.sh script, where the terminal outputs are saved to a logfile in the folder "logs"
+this is to create the FITS header file the full simulator should be executed using 
+
+>./SimulatorMueller.sh 
+
+here the terminal outputs are saved to a logfile in the folder "logs"
