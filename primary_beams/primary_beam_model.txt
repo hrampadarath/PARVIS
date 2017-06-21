@@ -1,0 +1,52 @@
+Primary beams (or complex voltage patterns) of the SKA1-MID dishes have been provided by the SKA Dish Consortium and used in this simulation. Here I will describe the format and how to turn them into 2D images using Python and Matlab.
+
+-----------
+Description
+-----------
+Link to primary beams: 
+Important: save to PARVIS/primary_beams
+
+The primary beams are provided in two files in Matlab format:
+
+    Data1.mat - in 10 MHz steps from 660 MHz to 750 MHz
+    Data2.mat - in 1 MHz steps from 690 MHz to 699 MHz 
+
+
+Each data file contains the variables:
+
+    freq = frequencies
+    th = theta angles ( polar  angles)
+    ph = phi angles (azimuthal angles)
+    Jones Matrix = [Jpv Jph; Jqv Jqh], where each Jxy is a 3 dimensional matrix of size length(th) x length(ph) x length(freq)
+
+
+The v and h refer to vertical and horizontal. Jpv is the vertical co-polarized fields and Jph the vertical cross-polarized fields. Similarly Jqh and Jqv are the horizontal co- and cross-polarized components. 
+
+----------------
+Making 2D plots
+----------------
+
+Matlab:
+
+To make a 2D contour plot:
+
+> contourf(u,v,Jpv)
+
+where u = sin(theta)cos(phi) and v = sin(theta)sin(phi)
+
+Note: I haven't been able to verify if this indeed gives the 2D plot. I don't use Matlab!
+
+
+Python:
+see plot_beam.py
+
+
+---------------------
+Using your own primary beams
+---------------------
+While it is not impossible, it would be difficult. The simplest would be to provide the primary beams in the format described above. Using a different format would require modification of the codes in JonesMatrix.py and sourceVisibility in PARVIS.py.
+If requested, I can make to include different, user defined primary beams.
+
+
+
+

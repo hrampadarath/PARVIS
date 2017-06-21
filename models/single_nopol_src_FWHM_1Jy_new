@@ -1,0 +1,6 @@
+#list of sources to be used in the A-projection simulation
+#centre:     ra='05:00:00', dec='45:00:00'
+#RAh RAm RAs DECd DECm DECs Stokes_I (Jy) frac_pol pol_angle 
+#5 0 0.0 44 9 56.506384334 1 0 0
+#4 56 20.0 45 21 0 2 0 0
+5 0 0 45 0 0 2 0 0

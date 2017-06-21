@@ -1,0 +1,139 @@
+<config name="DVA1/JVLA-A">
+    
+  <notes> 'Testing with SKA1MID configuration. First run of PARVIS.py' </notes>
+  
+    
+    
+    <PARAMETERS>
+      <NSTOKES> 4 </NSTOKES>
+      <NBAND> 1 </NBAND>  
+      <NCHAN> 1 </NCHAN> 
+      <NTONE>  1     </NTONE>
+      <NORB>   1     </NORB>
+      <NPOLY>  1     </NPOLY>
+      <NTAB>   1     </NTAB>
+      <NPCAL>  1     </NPCAL>
+    </PARAMETERS>
+
+    
+
+    <PRIMARY>
+      <BITPIX>8</BITPIX>
+      <NAXIS> 0</NAXIS>
+      <EXTEND>T</EXTEND>
+      <GROUPS>T</GROUPS>
+      <GCOUNT>0</GCOUNT>
+      <PCOUNT>0</PCOUNT>
+      <CORRELAT>'CASPER-FX'</CORRELAT>
+    </PRIMARY>
+    
+
+
+    
+    
+    <COMMON>
+       <OBSCODE> 'pySimulator' </OBSCODE>           
+       <RDATE> '2016-3-23' </RDATE>         
+       <NO_STKD> 4 </NO_STKD>
+       <STK_1> -5 </STK_1>
+       <NO_BAND>   params['NBAND'] </NO_BAND>
+       <NO_CHAN>   params['NCHAN'] </NO_CHAN>
+       <REF_FREQ> 700E+06 </REF_FREQ>
+       <CHAN_BW> 0.01E+06 </CHAN_BW>
+       <REF_PIXL>  1.00E+00        </REF_PIXL>
+       <TABREV>    1               </TABREV>
+       <EXTVER>    1               </EXTVER>
+    </COMMON>
+
+
+    
+
+    <ANTENNA>
+        <EXTNAME> 'ANTENNA'   </EXTNAME>
+        <NOPCAL>  0         </NOPCAL>
+        <POLTYPE> 'X-Y LIN'  </POLTYPE>
+	<POLTYA> 'X' </POLTYA>
+	<POLTYB> 'Y' </POLTYB>
+    </ANTENNA>
+
+    
+
+    <ARRAY_GEOMETRY>
+      <EXTNAME>  'ARRAY_GEOMETRY' </EXTNAME>
+      <ARRAYX> -1601.389E+03 </ARRAYX>
+      <ARRAYY> -5042.634E+03 </ARRAYY>
+      <ARRAYZ> 3553.876E+03 </ARRAYZ>
+      <ARRNAM> 'VLA' </ARRNAM>
+      <NUMORB>   0              </NUMORB>
+      <FREQ> 700E+06 </FREQ> 
+      <FRAME>    'GEOCENTRIC'   </FRAME>
+      <TIMSYS>   'UTC'          </TIMSYS>
+      <TIMESYS>  'UTC'          </TIMESYS>
+      <GSTIA0>   3.30909596261338038E+02 </GSTIA0>
+      <DEGPDY>   3.60985644973299998E+02 </DEGPDY>
+      <POLARX>   2.08099999999999996E-01 </POLARX>
+      <POLARY>   2.80019999999999989E-01 </POLARY>
+      <UT1UTC>  -1.63126999999999995E-01 </UT1UTC>
+      <IATUTC>   3.30000000000000000E+01 </IATUTC>
+    </ARRAY_GEOMETRY>
+
+  
+  
+  <FREQUENCY>
+    <EXTNAME>'FREQUENCY'</EXTNAME>
+  </FREQUENCY>
+    
+  
+  
+  <SOURCE>
+    <EXTNAME>'SOURCE'</EXTNAME>
+  </SOURCE>
+
+  
+
+  <UV_DATA>
+    <EXTNAME>   'UV_DATA'   </EXTNAME>
+    <TABREV>    2           </TABREV>
+    <DATE-OBS> '2016-3-23' </DATE-OBS>
+    <TELESCOP> 'VLA' </TELESCOP>
+    <OBSERVER> 'HRAMPADARATH' </OBSERVER>
+    <EQUINOX>   'J2000'     </EQUINOX>
+    <WEIGHTY>   'NORMAL'    </WEIGHTY>
+    <SORT>      '*'         </SORT>
+    <NMATRIX>   1           </NMATRIX>
+    <MAXIS>     6           </MAXIS>
+    <MAXIS1>    2           </MAXIS1>
+    <CTYPE1>    'COMPLEX'   </CTYPE1>
+    <CDELT1>    1.000E+00   </CDELT1>
+    <CRPIX1>    1.000E+00   </CRPIX1>
+    <CRVAL1>    1.000E+00   </CRVAL1>
+    <MAXIS2>    params['NSTOKES'] </MAXIS2>
+    <CTYPE2>    'STOKES'    </CTYPE2> 
+    <CDELT2>    -1.000E+00  </CDELT2>
+    <CRPIX2>    1.0000E+00  </CRPIX2>
+    <CRVAL2> -5.00E+00 </CRVAL2>
+    <MAXIS3>    params['NCHAN'] </MAXIS3>
+    <CTYPE3>    'FREQ'      </CTYPE3>
+    <CDELT3> 0.01E+06 </CDELT3>
+    <CRPIX3>    1.00000E+00 </CRPIX3>
+    <CRVAL3> 700E+06 </CRVAL3>
+    <MAXIS4>    params['NBAND'] </MAXIS4>
+    <CTYPE4>    'BAND'      </CTYPE4>
+    <CDELT4>    1.000E+00   </CDELT4>
+    <CRPIX4>    1.000E+00   </CRPIX4>
+    <CRVAL4>    1.000E+00   </CRVAL4>
+    <MAXIS5>    1           </MAXIS5>
+    <CTYPE5>    'RA'        </CTYPE5>
+    <CDELT5>    0.000E+00   </CDELT5>
+    <CRPIX5>    1.000E+00   </CRPIX5>
+    <CRVAL5>    0.000E+00   </CRVAL5>
+    <MAXIS6>    1           </MAXIS6>
+    <CTYPE6>    'DEC'       </CTYPE6>
+    <CDELT6>    0.000E+00   </CDELT6>
+    <CRPIX6>    1.000E+00   </CRPIX6>
+    <CRVAL6>    0.000E+00   </CRVAL6>
+    <TMATX11>   T           </TMATX11>
+  </UV_DATA>
+
+
+</config>

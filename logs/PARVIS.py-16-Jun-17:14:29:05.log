@@ -1,0 +1,3 @@
+Using inputs specified in PARVIS.inputs
+ Creating XML file to be used in pyfitsidi.py
+XML file configured and saved to: ./fits/DVA1_VLA_mueller.xml

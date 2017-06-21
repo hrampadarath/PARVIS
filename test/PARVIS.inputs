@@ -1,0 +1,60 @@
+#inputs for simulating radio interferometric observations in FITS-IDI format.
+#to be used with PARVIS.py
+
+#############specify some observation params
+ 
+notes 		= Testing with SKA1MID configuration. First run of PARVIS.py
+array 		= VLA		#VLA - JVLA; KAT-7 - SKAMID
+diameter	= 25	#m - antenna diameter
+###########pointing & time
+#N		= 27		#parameter deprciated in future versions of PARVIS.py
+#dec 		= 45		#Observing declination in degrees
+#ra  		= 5		#Observing RA in hrs
+RAcent		= 5,0,0.0	#central RA
+DECcent		= 45,0,0.0	#central DEC (set this to -45 for SKAMID)
+lat 		= 34		#latitude of the array (34: VLA; -30: SKAMID/KAT-7)
+
+Tobs 		= 12 		# total observing time in hrs
+tstep 	 	= 1.0     	# scan length of observation in mins
+
+######Frequency & Polarisation set up
+pol_len 	= 4		#number of pols [only 2 = XX and YY, 4 = XX, YY, XY and YX]
+ri_len  	= 2		#number of data points
+
+start_freq 	= 700 	#in MHz for the SKA sim the options are 
+	      		#freq1 = np.array([660,670,680,690,700,710,720,730,740,750])
+			#freq2 = np.array([690,691,692,693,694,695,696,697,698,699])
+chan_width 	= 0.01 	# size of each channel in MHz
+chan_len 	= 1 		#number of channels
+nband 		= 1		#number IFs
+
+#########Advanced simulation options
+doPB 		= F 		# simulate the antenna voltage pattern [T]rue or [F]alse
+wterm 		= F		# Turn the wterm on [T] or off [F]
+
+# derotate: time in minutes to derotate the primary beam - used only if derotation = Y [NOT CURRENTLY WORKING 7.12.16]
+derotation	= F		# Turn detrotation of the primary beam on (T) or off (F)
+derotate 	= 10		 
+
+
+
+##### files
+
+fitsfile 	= DVA1-noPB_12hrs_cent_noise.fitsidi	#output fits file
+outfolder 	= ./fits/ #Directory to write the fits to
+
+configxml 	= DVA1_VLA_mueller.xml			#xml file to generate the FITS header
+templatexml 	= config.xml				#template xml file
+
+array_config 	= VLA_C_hor_xyz_v1.txt			#JVLA/VLA antenna configuration file
+#array_config	= Rebaselined_15July2015_SKA-SA.enu.197x4_edit.txt # SKA1MID antenna configuration file
+
+srclist 	= single_nopol_src_FWHM_1Jy_new	#source list file - multiple random sources
+
+##### FOR THE SEMI-ANALYTICAL STUDY - Only for devel version#######
+DIR = /raid/scratch/haydenr/Dropbox/Research/A_Proj/github/DR_Limit_Analytical/
+image_array = image_array_HWHM_1mint_MS.txt
+amper_array = PB_FullMueller_FLUX_HWHM_1mint.txt
+
+
+
