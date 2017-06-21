@@ -2,13 +2,11 @@
 
 <p><b>PARVIS - Python skA Radio Visibility fIts Simulator </b></p>
 
-A python2 based, command line tool to  simulate a full radio interferometric observation and export to FITSidi format, which can be imaged within CASA. It is based upon Danny Price's pyFitsidi (https://github.com/telegraphic/pyfitsidi). An updated version is included in the "Imports" folder.
+A python2.7.x based, command line tool to  simulate a full radio interferometric observation and export to FITSidi format, which can be imaged within CASA. It is based upon Danny Price's pyFitsidi (https://github.com/telegraphic/pyfitsidi). An updated version is included in the "Imports" folder.
 
 This simulation was created to investigate the effects of a time and frequency variable Jones matrix of antenna i.e. the primary beam, on the output images.  Currently only an offset-gregorian primary beam model is
 implemented based upon the SKA1-MID dishes, although it is not difficult to include others.
 The primary beams can be downloaded from <a href="https://www.dropbox.com/s/pmkck48tc78esda/SKA_MID_Primary_Beams.tgz?dl=0">here</a>. Please see the description on primary_beam_model.txt in folder "primary_beams"
-      
-The simulator uses an input file and is is executed as 
 
 >python2 PARVIS.py -f simulation.inputs
     
@@ -19,6 +17,13 @@ The full simulator should be executed using
 >./SimulatorMueller.sh 
 
 here the terminal outputs are saved to a logfile in the folder "logs"
+
+<p><b>Inputs:</b></p>
+
+<p><i>Models</i></p> Currently the simulator can only use point or unresolved sources. Future versions will hopefully be able to incorporate, extednded/more interesting sources. To create a list of point sources, use the point_src_list_generator.py in the "tools folder". The simulator uses an input file and is executed as follows:
+
+<p><i>Antenna configurations</i></p> Only the VLA in C configuration and a version if the SKA1-MID baselines are included in the "antconfig" folder. However, it is possible to use any antenna configuration file. 
+
 
 <p><b>Dependencies:</b></p>
 
