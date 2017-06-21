@@ -3,7 +3,7 @@ Primary beams (or complex voltage patterns) of the SKA1-MID dishes have been pro
 -----------
 Description
 -----------
-Link to primary beams: 
+Link to primary beams: https://www.dropbox.com/s/pmkck48tc78esda/SKA_MID_Primary_Beams.tgz?dl=0
 Important: save to PARVIS/primary_beams
 
 The primary beams are provided in two files in Matlab format:
